@@ -1,6 +1,5 @@
 /* Css Generales */
-@import url(./colores.scss);
-@import url(./fuentes.scss);
+
 * {
     margin: 0px;
     padding: 0px;
@@ -12,19 +11,19 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: $colorGris;
+    background-color: $colores-get($colorGris);
 }
 
 a {
     text-decoration: none;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: $colorCrema;
+    color: $colores-get($colorCrema);
 }
 
 header {
     background-color: $colorGris;
     border-bottom-style: double;
-    border-color: $colorCrema;
+    border-color: $colores-get($colorCrema);
 }
 
 

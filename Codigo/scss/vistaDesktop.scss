@@ -1,6 +1,4 @@
 
-@import url(./colores.scss);
-@import url(./fuentes.scss);
 
 /* Vista para Desktop */
     /* Ocultaciones de Mobile */
@@ -15,6 +13,11 @@
 
     /* Estilo al Menu de cabecera */
 
+    @mixin tamanio($width, $height) {
+        height: $height;
+        width: $width;
+    }
+
     .header__nav {
         display: flex;
         align-items: center;
@@ -24,7 +27,7 @@
     .header__titulo {
         font-family: Fuente Titulo;
         font-size: 110px;
-        color: #fcfae4;
+        color: $colores-get($colorCrema);
         margin-left: 190px;
     }
 
@@ -34,8 +37,7 @@
         margin: 1%;
         margin-left: 6%;
 
-        width: 150px;
-        height: 150px;
+        @include tamanio(150px, 150px);
     }
 
     .header__nav__lista {
@@ -52,7 +54,7 @@
     li {
         padding: 5px;
         border-style: solid;
-        border-color: #fcfae4;
+        border-color: $colores-get($colorCrema);
         border-top: none;
         border-bottom: none;
         border-left: none;
@@ -76,14 +78,15 @@
         padding: 85px;
         width: 50%;
         height: fit-content;
-        background-color: #fcfae4;
+        background-color: $colores-get($colorCrema);
         border-radius: 6%;
         position: relative;
     }
 
     .info__img__home {
-        height: 600px;
-        width: 600px;
+        
+        @include tamanio(600px, 600px);
+
         border-radius: 10%;
         margin: 53px;
         margin-left: 73px;
@@ -100,8 +103,7 @@
     /* PRODUCTOS */
 
     .info__img__prod {
-        height: 600px;
-        width: 600px;
+        @include tamanio(600px, 600px);
         border-radius: 10%;
         margin: 53px;
         margin-left: 30px;
@@ -123,14 +125,13 @@
         padding: 85px;
         width: 50%;
         height: fit-content;
-        background-color: #fcfae4;
+        background-color: $colores-get($colorCrema);
         border-radius: 6%;
         position: relative;
     }
 
     .info__img__acerca {
-        height: 600px;
-        width: 600px;
+        @include tamanio(600px, 600px);
         border-radius: 10%;
         margin: 30px;
     }
@@ -147,7 +148,7 @@
         padding: 85px;
         width: 50%;
         height: fit-content;
-        background-color: #fcfae4;
+        background-color: $colores-get($colorCrema);
         border-radius: 6%;
         position: relative;
     }
@@ -161,7 +162,7 @@
     .redes {
         display: flex;
         align-items: center;
-        background-color: #fcfae4;
+        background-color: $colores-get($colorCrema);
         justify-content: space-around;
         border-style: none;
         border-top-style: double;
@@ -182,16 +183,15 @@
     .redes__lista__img {
         margin-left: 90px;
         margin-right: 90px;
-        width: 50px;
-        height: 50px;
+        @include tamanio(50px, 50px);
     }
 
     /* Estilo al footer */
 
     .footer {
-        background-color: #303034;
+        background-color: $colores-get($colorGris);
         border-top-style: double;
-        border-color: #fcfae4;
+        border-color: $colores-get($colorCrema);
         margin-top: auto;
         display: table;
         height: 40px;
@@ -200,15 +200,14 @@
 
     .footer__img {
         padding: 5px;
-        width: 25px;
-        height: 25px;
+        @include tamanio(25px, 25px);
         vertical-align: -11px;
     }
 
     h2 {
         font-family: Fuente Titulo;
         font-size: 15px;
-        color: #fcfae4;
+        color: $colores-get($colorCrema);
         margin-right: 50px;
         text-align: end;
     }

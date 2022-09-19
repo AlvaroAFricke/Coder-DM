@@ -1,10 +1,13 @@
 /* Vista para Mobile */
 
-@import url(./colores.scss);
-@import url(./fuentes.scss);
-
 @media screen and (max-width: 768px) {
     /* Ocultaciones del Desktop */
+
+    .alineacion{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     .header__titulo {
         display: none;
@@ -17,19 +20,19 @@
     /* Estilos del Header */
 
     .header__nav {
-        display: flex;
-        align-items: center;
+        @extend.alineacion;
         justify-content: space-around;
     }
 
     .mobile__ham-menu {
-        display: flex;
+
+        @extend.alineacion;
+
         width: 75px;
         height: 75px;
-        background-color: $colorGris;
+        background-color: $colores-get($colorGris);
         border-radius: 20%;
-        align-items: center;
-        justify-content: center;
+
 
     }
     
@@ -49,14 +52,15 @@
     /* HOME-MOBILE */
 
     .info__img {
+
+        @extend.alineacion;
+
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+
         flex-wrap: nowrap;
     }
 
@@ -70,14 +74,13 @@
     /* ABOUT-MOBILE */
 
     .info__texto__acerca {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
+        
+        @extend.alineacion;
+
         padding: 90px;
         width: 200px;
         height: 100px;
-        background-color: $colorCrema;
+        background-color: $colores-get($colorCrema);
         border-radius: 6%;
         position: relative;
     }
@@ -99,16 +102,14 @@
 
     .info__texto__enco {
 
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
+        @extend.alineacion;
+
         height: 380px;
         width: 390px;
         margin: 20px;
         padding: 30px;
         border-radius: 6%;
-        background-color: $colorCrema;
+        background-color: $colores-get($colorCrema);
         position: relative;
     }
 
@@ -132,9 +133,10 @@
     /* Estilo a las redes sociales */
 
     .redes {
-        display: flex;
-        align-items: center;
-        background-color: $colorCrema;
+
+        @extend.alineacion;
+
+        background-color: $colores-get($colorCrema);
         justify-content: space-around;
         border-style: none;
         border-top-style: double;
@@ -142,9 +144,7 @@
 
     .redes__lista {
         list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend.alineacion;
     }
 
     .redes__lista__item {
@@ -164,7 +164,7 @@
     .footer {
         background-color: $colorGris;
         border-top-style: double;
-        border-color: $colorCrema;
+        border-color: $colores-get($colorCrema);
         margin-top: auto;
         display: table;
         height: 40px;
@@ -181,7 +181,7 @@
     h2 {
         font-family: Fuente Titulo;
         font-size: 15px;
-        color: $colorCrema;
+        color: $colores-get($colorCrema);
         margin-right: 50px;
         text-align: end;
     }
