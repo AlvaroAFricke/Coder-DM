@@ -1,5 +1,4 @@
 /* Css Generales */
-
 * {
     margin: 0px;
     padding: 0px;
@@ -11,19 +10,19 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    background-color: $colores-get($colorGris);
+    background-color: map-get($colores, "gris");
 }
 
 a {
     text-decoration: none;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: $colores-get($colorCrema);
+    color: map-get($colores, "gris");
 }
 
 header {
-    background-color: $colorGris;
+    background-color: map-get($colores, "gris");
     border-bottom-style: double;
-    border-color: $colores-get($colorCrema);
+    border-color: map-get($colores, "gris");
 }
 
 

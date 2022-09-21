@@ -1,133 +1,93 @@
 /* Vista para Mobile */
 
 @media screen and (max-width: 768px) {
-    /* Ocultaciones del Desktop */
 
-    .alineacion{
+    .alineacion {
         display: flex;
         align-items: center;
-        justify-content: center;
+        flex-direction: row;
     }
 
-    .header__titulo {
-        display: none;
-    }
 
-    .header__nav__lista {
-        display: none;
+    @mixin tamanio($width, $height) {
+        height: $height;
+        width: $width;
     }
 
     /* Estilos del Header */
+    .header {
 
-    .header__nav {
         @extend.alineacion;
         justify-content: space-around;
-    }
 
-    .mobile__ham-menu {
+        border-bottom: double;
+        border-color: map-get($map: $colores, $key: crema);
 
-        @extend.alineacion;
+        .header__titulo {
+            display: none;
+        }
 
-        width: 75px;
-        height: 75px;
-        background-color: $colores-get($colorGris);
-        border-radius: 20%;
+        .header__nav__hmb {
+            background-color: map-get($map: $colores, $key: crema);
+        }
 
+        .header__nav {
+            background-color: map-get($map: $colores, $key: crema);
+            border-radius: 6%;
+            margin: 3px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+        }
 
-    }
-    
-    .logo {
-        height: 250px;
-        width: 250px;
-        margin-left: 10px;
+        .logo {
+            @include tamanio(150px, 150px);
+        }
+
     }
 
     /* Estilo al area de informacion */
 
     .info {
-        display: flex;
+        padding: 0px;
+        margin: 0px;
         background-image: url(../media/madera.png);
-    }
 
-    /* HOME-MOBILE */
+        .info__texto {
+            padding: 5px;
+            margin: 10%;
+            margin-bottom: 25px;
+            border-radius: 10%;
+            background-color: map-get($map: $colores, $key: crema);
+            color: map-get($map: $colores, $key: gris);
+        }
 
-    .info__img {
+        .info__img__home {
+            @include tamanio(350px, 300px);
+            border-radius: 10%;
+            margin: 5%;
+        }
 
-        @extend.alineacion;
-
-        width: 100%;
-        height: 100%;
-
-        flex-direction: column;
-        justify-content: center;
-
-        flex-wrap: nowrap;
-    }
-
-    .info__img__home {
-        height: 600px;
-        width: 450px;
-        border-radius: 10%;
-        margin: 5%;
-    }
-
-    /* ABOUT-MOBILE */
-
-    .info__texto__acerca {
-        
-        @extend.alineacion;
-
-        padding: 90px;
-        width: 200px;
-        height: 100px;
-        background-color: $colores-get($colorCrema);
-        border-radius: 6%;
-        position: relative;
-    }
-
-    .info__img__acerca {
-        height: 600px;
-        width: 450px;
-        border-radius: 10%;
-        margin: 30px;
     }
 
     /* FIND-MOBILE */
 
-    .info__enco {
-        display: flex;
-        flex-direction: column;
-        background-image: url(../media/madera.png);
-    }
-
-    .info__texto__enco {
-
-        @extend.alineacion;
-
-        height: 380px;
-        width: 390px;
-        margin: 20px;
-        padding: 30px;
-        border-radius: 6%;
-        background-color: $colores-get($colorCrema);
-        position: relative;
-    }
-
     iframe {
-        height: 400px;
-        width: 450px;
+        @include tamanio(350px, 300px);
         margin: 20px;
         border-radius: 6%;
     }
 
     /* PRODUCT-MOBILE */
 
-    .info__img__prod {
-        display: grid;
+    .card {
+        background-color: map-get($map: $colores, $key: crema);
+        margin: 30px;
         border-radius: 5%;
-        margin: 10%;
-        height: 450px;
-        width: 400px;
+    }
+
+    .card-img-top {
+        padding: 5px;
+        border-radius: 8%
     }
 
     /* Estilo a las redes sociales */
@@ -136,25 +96,14 @@
 
         @extend.alineacion;
 
-        background-color: $colores-get($colorCrema);
+        background-color: map-get($map: $colores, $key: crema);
         justify-content: space-around;
         border-style: none;
         border-top-style: double;
     }
 
-    .redes__lista {
-        list-style: none;
-        @extend.alineacion;
-    }
-
-    .redes__lista__item {
-        border-style: none;
-    }
-
     .redes__lista__img {
-        margin-top: 5px;
-        margin-left: 40px;
-        margin-right: 40px;
+
         width: 50px;
         height: 50px;
     }
@@ -162,9 +111,9 @@
     /* Estilo al footer */
 
     .footer {
-        background-color: $colorGris;
+        background-color: map-get($map: $colores, $key: gris);
         border-top-style: double;
-        border-color: $colores-get($colorCrema);
+        border-color: map-get($map: $colores, $key: gris);
         margin-top: auto;
         display: table;
         height: 40px;
@@ -181,9 +130,10 @@
     h2 {
         font-family: Fuente Titulo;
         font-size: 15px;
-        color: $colores-get($colorCrema);
-        margin-right: 50px;
+        color: map-get($map: $colores, $key: crema);
+        margin-right: 5px;
         text-align: end;
+
     }
 
 }

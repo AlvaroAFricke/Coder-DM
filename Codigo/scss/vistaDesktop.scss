@@ -1,14 +1,11 @@
-
-
 /* Vista para Desktop */
-    /* Ocultaciones de Mobile */
+/* Ocultaciones de Mobile */
+@media screen and (min-width: 768px) {
 
-    .mobile__list {
-        display: none;
-    }
-
-    .mobile__ham-menu{
-        display: none;
+    .alinear {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
     }
 
     /* Estilo al Menu de cabecera */
@@ -18,27 +15,49 @@
         width: $width;
     }
 
+    .header {
+
+        @extend.alinear;
+        justify-content: space-around;
+
+        border-bottom: double;
+        border-color: map-get($map: $colores, $key: crema);
+
+        .header__titulo {
+            font-family: Fuente Titulo;
+            font-size: 110px;
+            color: map-get($map: $colores, $key: crema);
+            margin-left: 190px;
+        }
+
+        .header__nav {
+            background-color: map-get($map: $colores, $key: crema);
+            border-radius: 6%;
+            margin: 3px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+        }
+
+        .logo {
+            border-radius: 50%;
+    
+            margin: 1%;
+            margin-left: 6%;
+    
+            @include tamanio(250px, 250px);
+        }
+
+    }
+
     .header__nav {
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
 
-    .header__titulo {
-        font-family: Fuente Titulo;
-        font-size: 110px;
-        color: $colores-get($colorCrema);
-        margin-left: 190px;
-    }
 
-    .logo {
-        border-radius: 50%;
 
-        margin: 1%;
-        margin-left: 6%;
 
-        @include tamanio(150px, 150px);
-    }
 
     .header__nav__lista {
         list-style: none;
@@ -53,15 +72,7 @@
 
     li {
         padding: 5px;
-        border-style: solid;
-        border-color: $colores-get($colorCrema);
-        border-top: none;
-        border-bottom: none;
-        border-left: none;
-    }
-
-    .header__nav__lista__less {
-        border-right: none;
+        margin: 5px;
     }
 
     /* Estilo al area de informacion */
@@ -69,36 +80,63 @@
     /* HOME */
 
     .info {
-        display: flex;
+        @extend.alinear;
+        padding: 0px;
+        margin: 0px;
         background-image: url(../media/madera.png);
+        justify-content: center;
+        flex-direction: row;
+
+        .info__texto {
+            @include tamanio(600px, 600px);
+            height: fit-content;
+            padding: 8px;
+            margin: 10%;
+            border-radius: 10%;
+            font-size: x-large;
+            background-color: map-get($map: $colores, $key: crema);
+            color: map-get($map: $colores, $key: gris);
+        }
+
+        .info__img__home {
+            @include tamanio(350px, 300px);
+            border-radius: 10%;
+            margin: 5%;
+        }
+
     }
 
-    .info__texto {
-        margin: auto 20px;
-        padding: 85px;
-        width: 50%;
-        height: fit-content;
-        background-color: $colores-get($colorCrema);
-        border-radius: 6%;
-        position: relative;
-    }
+    // .info {
+    //     display: flex;
+    //     background-image: url(../media/madera.png);
+    // }
 
-    .info__img__home {
-        
-        @include tamanio(600px, 600px);
+    // .info__texto {
+    //     margin: 20px;
+    //     padding: 85px;
+    //     width: 50%;
+    //     height: fit-content;
+    //     background-color: map-get($map: $colores, $key: crema);
+    //     border-radius: 8%;
+    //     position: relative;
+    // }
 
-        border-radius: 10%;
-        margin: 53px;
-        margin-left: 73px;
-        margin-right: 0px;
-    }
+    // .info__img__home {
 
-    .info__img {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
+    //     @include tamanio(600px, 600px);
+
+    //     border-radius: 10%;
+    //     margin: 53px;
+    //     margin-left: 73px;
+    //     margin-right: 0px;
+    // }
+
+    // .info__img {
+    //     width: 100%;
+    //     height: 100%;
+    //     display: flex;
+    //     justify-content: space-between;
+    // }
 
     /* PRODUCTOS */
 
@@ -125,7 +163,7 @@
         padding: 85px;
         width: 50%;
         height: fit-content;
-        background-color: $colores-get($colorCrema);
+        background-color: map-get($map: $colores, $key: crema);
         border-radius: 6%;
         position: relative;
     }
@@ -148,7 +186,7 @@
         padding: 85px;
         width: 50%;
         height: fit-content;
-        background-color: $colores-get($colorCrema);
+        background-color: map-get($map: $colores, $key: crema);
         border-radius: 6%;
         position: relative;
     }
@@ -162,7 +200,7 @@
     .redes {
         display: flex;
         align-items: center;
-        background-color: $colores-get($colorCrema);
+        background-color: map-get($map: $colores, $key: crema);
         justify-content: space-around;
         border-style: none;
         border-top-style: double;
@@ -181,17 +219,15 @@
     }
 
     .redes__lista__img {
-        margin-left: 90px;
-        margin-right: 90px;
         @include tamanio(50px, 50px);
     }
 
     /* Estilo al footer */
 
     .footer {
-        background-color: $colores-get($colorGris);
+        background-color: map-get($map: $colores, $key: gris);
         border-top-style: double;
-        border-color: $colores-get($colorCrema);
+        border-color: map-get($map: $colores, $key: crema);
         margin-top: auto;
         display: table;
         height: 40px;
@@ -207,8 +243,9 @@
     h2 {
         font-family: Fuente Titulo;
         font-size: 15px;
-        color: $colores-get($colorCrema);
+        color: map-get($map: $colores, $key: crema);
         margin-right: 50px;
         text-align: end;
     }
 
+}
