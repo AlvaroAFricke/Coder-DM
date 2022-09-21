@@ -40,7 +40,12 @@
         }
 
         .logo {
-            @include tamanio(150px, 150px);
+            @include tamanio(250px, 250px);
+        }
+
+        .nav-item :hover{
+            background-color: map-get($map: $colores, $key: gris);
+            color: map-get($map: $colores, $key: crema);
         }
 
     }

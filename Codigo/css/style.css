@@ -31,7 +31,7 @@ ul {
 
 /* Vista para Desktop */
 /* Ocultaciones de Mobile */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .alinear, .header, .info {
     display: flex;
     align-items: center;
@@ -48,7 +48,7 @@ ul {
       margin-left: 190px; }
     .header .header__nav {
       background-color: #fcfae4;
-      border-radius: 6%;
+      border-radius: 2%;
       margin: 3px;
       font-family: 'Courier New', Courier, monospace;
       font-size: medium; }
@@ -58,22 +58,12 @@ ul {
       margin-left: 6%;
       height: 250px;
       width: 250px; }
-  .header__nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-around; }
-  .header__nav__lista {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin-left: 3.5%;
-    position: relative;
-    justify-content: space-evenly;
-    align-content: center;
-    flex-direction: row; }
-  li {
-    padding: 5px;
-    margin: 5px; }
+    .header .nav-item :hover {
+      background-color: #303034;
+      color: #fcfae4; }
+    .header li {
+      padding: 5px;
+      margin: 5px; }
   /* Estilo al area de informacion */
   /* HOME */
   .info {
@@ -98,13 +88,15 @@ ul {
       border-radius: 10%;
       margin: 5%; }
   /* PRODUCTOS */
-  .info__img__prod {
+  .card {
     height: 600px;
     width: 600px;
-    border-radius: 10%;
-    margin: 53px;
-    margin-left: 30px;
-    margin-right: 30px; }
+    background-color: #fcfae4;
+    margin: 30px;
+    border-radius: 5%; }
+  .card-img-top {
+    padding: 5px;
+    border-radius: 8%; }
   /* COMENTARIOS */
   .comentarios {
     display: flex;
@@ -199,8 +191,11 @@ ul {
       font-family: 'Courier New', Courier, monospace;
       font-size: medium; }
     .header .logo {
-      height: 150px;
-      width: 150px; }
+      height: 250px;
+      width: 250px; }
+    .header .nav-item :hover {
+      background-color: #303034;
+      color: #fcfae4; }
   /* Estilo al area de informacion */
   .info {
     padding: 0px;
