@@ -214,20 +214,20 @@ ul {
       background-color: #fcfae4;
       color: #303034; }
     .info .info__img__home {
-      height: 300px;
-      width: 350px;
+      height: 30%;
+      width: auto;
       border-radius: 10%;
       margin: 5%; }
   .info__img__acerca {
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: auto;
     border-radius: 10%;
     margin-top: 1%;
     margin-bottom: 1%; }
   /* FIND-MOBILE */
   iframe {
     height: 300px;
-    width: 350px;
+    width: auto;
     margin: 20px;
     border-radius: 6%; }
   /* PRODUCT-MOBILE */
