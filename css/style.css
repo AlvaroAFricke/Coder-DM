@@ -69,24 +69,28 @@ ul {
   .info {
     padding: 0px;
     margin: 0px;
+    height: 100%;
+    width: 100%;
     background-image: url(../media/madera.png);
-    justify-content: center;
-    flex-direction: row; }
+    justify-content: center; }
     .info .info__texto {
-      height: 600px;
-      width: 600px;
+      height: 25%;
+      width: 25%;
       height: fit-content;
       padding: 8px;
-      margin: 10%;
+      margin-top: 5%;
+      margin-bottom: 5%;
       border-radius: 10%;
       font-size: x-large;
       background-color: #fcfae4;
       color: #303034; }
     .info .info__img__home {
-      height: 300px;
-      width: 350px;
+      height: 500px;
+      width: 500px;
       border-radius: 10%;
-      margin: 5%; }
+      margin-top: 20%;
+      margin-bottom: 20%;
+      margin-left: 30%; }
   /* PRODUCTOS */
   .card {
     height: 600px;
@@ -111,10 +115,11 @@ ul {
     border-radius: 6%;
     position: relative; }
   .info__img__acerca {
-    height: 600px;
-    width: 600px;
+    height: 500px;
+    width: 500px;
     border-radius: 10%;
-    margin: 30px; }
+    margin-top: 20%;
+    margin-bottom: 20%; }
   /* ENCONTRANOS */
   .info__enco {
     display: flex;
@@ -213,6 +218,12 @@ ul {
       width: 350px;
       border-radius: 10%;
       margin: 5%; }
+  .info__img__acerca {
+    height: 400px;
+    width: 400px;
+    border-radius: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%; }
   /* FIND-MOBILE */
   iframe {
     height: 300px;

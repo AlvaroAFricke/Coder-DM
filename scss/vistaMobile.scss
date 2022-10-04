@@ -73,6 +73,12 @@
         }
 
     }
+    .info__img__acerca {
+        @include tamanio(400px, 400px);
+        border-radius: 10%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
 
     /* FIND-MOBILE */
 
